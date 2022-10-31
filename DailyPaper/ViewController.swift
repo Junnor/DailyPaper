@@ -9,6 +9,7 @@ import UIKit
 
 enum DataType: String {
     case popTask
+    case audioRecorder
 }
 
 class ViewController: UIViewController {
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private let items: [DataType] = [.popTask]
+    private let items: [DataType] = [.popTask, .audioRecorder]
 
 }
 
@@ -59,6 +60,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 self?.present(alert, animated: true)
             }
             PopWindowQueue.enqueue(task2)
+            
+        case .audioRecorder:
+            performSegue(withIdentifier: "audioRecorder", sender: self)
         }
     }
     
