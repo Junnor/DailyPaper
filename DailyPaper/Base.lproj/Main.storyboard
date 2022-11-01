@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbm-QY-U5c">
-                                <rect key="frame" x="80" y="257" width="56" height="34.666666666666686"/>
+                                <rect key="frame" x="76" y="257" width="56" height="34.666666666666686"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Play"/>
                                 <connections>
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baS-8C-ZHz">
-                                <rect key="frame" x="231.66666666666666" y="257" width="78.333333333333343" height="34.666666666666686"/>
+                                <rect key="frame" x="258" y="257" width="78.333333333333314" height="34.666666666666686"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Record"/>
                                 <connections>
@@ -85,12 +85,14 @@
                         <viewLayoutGuide key="safeArea" id="l87-gI-WWM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Fbm-QY-U5c" firstAttribute="top" secondItem="YNb-pi-2Pm" secondAttribute="bottom" constant="65" id="0uj-M3-cM5"/>
+                            <constraint firstItem="l87-gI-WWM" firstAttribute="trailing" secondItem="baS-8C-ZHz" secondAttribute="trailing" constant="53.666666666666686" id="K67-gR-nQE"/>
                             <constraint firstItem="YNb-pi-2Pm" firstAttribute="top" secondItem="l87-gI-WWM" secondAttribute="top" constant="80" id="K85-5G-5Yg"/>
+                            <constraint firstItem="Fbm-QY-U5c" firstAttribute="leading" secondItem="l87-gI-WWM" secondAttribute="leading" constant="76" id="LCf-sH-a4G"/>
                             <constraint firstItem="baS-8C-ZHz" firstAttribute="centerY" secondItem="Fbm-QY-U5c" secondAttribute="centerY" id="LLw-B8-W88"/>
-                            <constraint firstItem="Fbm-QY-U5c" firstAttribute="leading" secondItem="l87-gI-WWM" secondAttribute="leading" constant="80" id="SWK-Yb-FrT"/>
-                            <constraint firstItem="l87-gI-WWM" firstAttribute="trailing" secondItem="baS-8C-ZHz" secondAttribute="trailing" constant="80" id="URI-qB-Nje"/>
+                            <constraint firstItem="baS-8C-ZHz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YNb-pi-2Pm" secondAttribute="trailing" constant="8" symbolic="YES" id="XKN-0f-PwF"/>
                             <constraint firstItem="YNb-pi-2Pm" firstAttribute="centerX" secondItem="l87-gI-WWM" secondAttribute="centerX" id="ojE-EC-G0f"/>
-                            <constraint firstItem="Fbm-QY-U5c" firstAttribute="top" secondItem="l87-gI-WWM" secondAttribute="top" constant="166" id="u2s-xR-DyV"/>
+                            <constraint firstItem="YNb-pi-2Pm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Fbm-QY-U5c" secondAttribute="trailing" constant="8" symbolic="YES" id="rIw-mu-vr3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jAS-y8-M7O"/>

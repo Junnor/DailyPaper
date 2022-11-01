@@ -10,6 +10,8 @@ import UIKit
 enum DataType: String {
     case popTask
     case audioRecorder
+    case normalAlert
+    case bottomAlert
 }
 
 class ViewController: UIViewController {
@@ -21,8 +23,13 @@ class ViewController: UIViewController {
         }
     }
     
-    private let items: [DataType] = [.popTask, .audioRecorder]
-
+    private let items: [DataType] = [.popTask, .audioRecorder, .normalAlert, .bottomAlert]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.backgroundColor = .white
+    }
 }
 
 
@@ -39,7 +46,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         
         switch items[indexPath.item] {
         case .popTask:
@@ -63,6 +69,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
         case .audioRecorder:
             performSegue(withIdentifier: "audioRecorder", sender: self)
+        case .normalAlert:
+            let pop = NormalAlertView(title: "Love", message: "I love peace")
+            pop.present()
+        case .bottomAlert:
+            let pop = DemoBottomAlert(frame: .zero)
+            pop.present()
         }
     }
     
