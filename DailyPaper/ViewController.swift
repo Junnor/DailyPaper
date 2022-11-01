@@ -70,7 +70,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case .audioRecorder:
             performSegue(withIdentifier: "audioRecorder", sender: self)
         case .normalAlert:
-            let pop = NormalAlertView(title: "Love", message: "I love peace")
+            let pop = NormalAlertView(title: "Love", message: "I love peace I love peace I love peace I love peace I love peace I love peace I love peace")
             pop.present()
         case .bottomAlert:
             let pop = DemoBottomAlert(frame: .zero)
