@@ -12,6 +12,25 @@ enum DataType: String {
     case audioRecorder
     case normalAlert
     case bottomAlert
+    case floatWindow
+}
+
+struct Animal<T> {
+    
+    var fffff: T
+    
+    init(fffff: T) {
+        self.fffff = fffff
+    }
+}
+
+protocol Fly {
+    
+    associatedtype Item
+    
+    mutating func append(_ item: Item)
+    var count: Int { get }
+
 }
 
 class ViewController: UIViewController {
@@ -23,13 +42,21 @@ class ViewController: UIViewController {
         }
     }
     
-    private let items: [DataType] = [.popTask, .audioRecorder, .normalAlert, .bottomAlert]
+    private let items: [DataType] = [.popTask, .audioRecorder, .normalAlert, .bottomAlert,  .floatWindow]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.backgroundColor = .white
     }
+    
+    // 测试浮窗（需要强引用）
+    lazy var floatCornerWindow: PopWindow = {
+        let window = PopWindow(frame: CGRect(x: 100, y: 200, width: 100, height: 100))
+        window.roundCorners(.allCorners, radius: 100/2)
+        return window
+    }()
+
 }
 
 
@@ -75,7 +102,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case .bottomAlert:
             let pop = DemoBottomAlert(frame: .zero)
             pop.present()
+        case .floatWindow:
+            windowLog(order: 0)
+
+            floatCornerWindow.isHidden = false // 单纯的显示window而已
+            floatCornerWindow.makeKeyAndVisible() // 替换 application 的 keyWindow
+            
+            windowLog(order: 2)
         }
     }
     
 }
+

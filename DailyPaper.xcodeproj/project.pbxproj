@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A7E458F29151382000D8E8B /* PopWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E458E29151382000D8E8B /* PopWindow.swift */; };
 		5AF01A6F290BC38E00F980DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF01A6E290BC38E00F980DB /* AppDelegate.swift */; };
-		5AF01A71290BC38E00F980DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF01A70290BC38E00F980DB /* SceneDelegate.swift */; };
 		5AF01A73290BC38E00F980DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF01A72290BC38E00F980DB /* ViewController.swift */; };
 		5AF01A76290BC38E00F980DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF01A74290BC38E00F980DB /* Main.storyboard */; };
 		5AF01A78290BC38F00F980DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF01A77290BC38F00F980DB /* Assets.xcassets */; };
@@ -23,9 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A7E458E29151382000D8E8B /* PopWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopWindow.swift; sourceTree = "<group>"; };
 		5AF01A6B290BC38E00F980DB /* DailyPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF01A6E290BC38E00F980DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5AF01A70290BC38E00F980DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5AF01A72290BC38E00F980DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5AF01A75290BC38E00F980DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AF01A77290BC38F00F980DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,10 +84,10 @@
 			isa = PBXGroup;
 			children = (
 				5AF01A6E290BC38E00F980DB /* AppDelegate.swift */,
-				5AF01A70290BC38E00F980DB /* SceneDelegate.swift */,
 				5AF01A72290BC38E00F980DB /* ViewController.swift */,
 				5AF01A82290BC3A500F980DB /* PopWindowQueue.swift */,
 				5AF58FED290FB60600780CB7 /* AudioRecordViewController.swift */,
+				5A7E458E29151382000D8E8B /* PopWindow.swift */,
 				5AF58FF32911379A00780CB7 /* Alert */,
 				5AF01A74290BC38E00F980DB /* Main.storyboard */,
 				5AF01A77290BC38F00F980DB /* Assets.xcassets */,
@@ -234,10 +234,10 @@
 			files = (
 				5AF58FFB29113B5E00780CB7 /* DemoBottomAlert.swift in Sources */,
 				5AF58FEE290FB60600780CB7 /* AudioRecordViewController.swift in Sources */,
+				5A7E458F29151382000D8E8B /* PopWindow.swift in Sources */,
 				5AF01A73290BC38E00F980DB /* ViewController.swift in Sources */,
 				5AF58FF92911391100780CB7 /* NormalAlertView.swift in Sources */,
 				5AF01A6F290BC38E00F980DB /* AppDelegate.swift in Sources */,
-				5AF01A71290BC38E00F980DB /* SceneDelegate.swift in Sources */,
 				5AF58FF52911390200780CB7 /* AlertContainer.swift in Sources */,
 				5AF58FF72911390800780CB7 /* BottomAlertContainer.swift in Sources */,
 				5AF01A83290BC3A500F980DB /* PopWindowQueue.swift in Sources */,
@@ -391,11 +391,13 @@
 				DEVELOPMENT_TEAM = 568XKG2E4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyPaper/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "use micro phone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,11 +423,13 @@
 				DEVELOPMENT_TEAM = 568XKG2E4W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyPaper/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "use micro phone";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
