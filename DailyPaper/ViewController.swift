@@ -7,56 +7,46 @@
 
 import UIKit
 
-enum DataType: String {
-    case popTask
-    case audioRecorder
-    case normalAlert
-    case bottomAlert
-    case floatWindow
-}
-
-struct Animal<T> {
-    
-    var fffff: T
-    
-    init(fffff: T) {
-        self.fffff = fffff
-    }
-}
-
-protocol Fly {
-    
-    associatedtype Item
-    
-    mutating func append(_ item: Item)
-    var count: Int { get }
-
-}
 
 class ViewController: UIViewController {
+    
+    enum DataType: String {
+        case popTask
+        case audioRecorder
+        case normalAlert
+        case bottomAlert
+        case floatWindow
+    }
+    
+    private let items: [DataType] = [
+        .popTask,
+        .audioRecorder,
+        .normalAlert,
+        .bottomAlert,
+        .floatWindow]
+    
     
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.dataSource = self
             tableView.delegate = self
+            
+            tableView.backgroundColor = .white
         }
     }
-    
-    private let items: [DataType] = [.popTask, .audioRecorder, .normalAlert, .bottomAlert,  .floatWindow]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = .white
     }
     
-    // 测试浮窗（需要强引用）
+    // 测试 window 浮窗（需要强引用）
     lazy var floatCornerWindow: PopWindow = {
-        let window = PopWindow(frame: CGRect(x: 100, y: 200, width: 100, height: 100))
+        let window = PopWindow(frame: CGRect(x: 250, y: 400, width: 100, height: 100))
         window.roundCorners(.allCorners, radius: 100/2)
         return window
     }()
-
+    
 }
 
 
@@ -106,11 +96,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             windowLog(order: 0)
 
             floatCornerWindow.isHidden = false // 单纯的显示window而已
-            floatCornerWindow.makeKeyAndVisible() // 替换 application 的 keyWindow
+//            floatCornerWindow.makeKeyAndVisible() // 替换 application 的 keyWindow
             
             windowLog(order: 2)
         }
     }
     
 }
-

@@ -7,13 +7,6 @@
 
 import UIKit
 
-func windowLog(order: Int) {
-    print("\(order): windows = \(UIApplication.shared.windows.count)")
-    for window in UIApplication.shared.windows {
-        print("window = \(window), \nisKeyWindow = \(window.isKeyWindow)")
-    }
-    print("\n")
-}
 
 class PopWindow: UIWindow {
     
@@ -22,7 +15,7 @@ class PopWindow: UIWindow {
         super.init(frame: frame)
         
         backgroundColor = .cyan
-        windowLevel = UIWindow.Level.statusBar + 1000000000
+        windowLevel = UIWindow.Level.statusBar + 100
         rootViewController = UIViewController()
         
         let pan = UIPanGestureRecognizer(target: self, action: #selector(toMove(recognizer: )))
