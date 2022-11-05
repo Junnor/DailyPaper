@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         case normalAlert
         case bottomAlert
         case floatWindow
+        case advancedSwift
     }
     
     private let items: [DataType] = [
@@ -23,7 +24,9 @@ class ViewController: UIViewController {
         .audioRecorder,
         .normalAlert,
         .bottomAlert,
-        .floatWindow]
+        .floatWindow,
+        .advancedSwift
+    ]
     
     
     @IBOutlet weak var tableView: UITableView! {
@@ -38,6 +41,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let vc = SwiftViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     // 测试 window 浮窗（需要强引用）
@@ -95,10 +105,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         case .floatWindow:
             windowLog(order: 0)
 
-            floatCornerWindow.isHidden = false // 单纯的显示window而已
+            floatCornerWindow.isHidden.toggle() // 单纯的显示window而已
 //            floatCornerWindow.makeKeyAndVisible() // 替换 application 的 keyWindow
             
             windowLog(order: 2)
+            
+        case .advancedSwift:
+            let vc = SwiftViewController()
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     

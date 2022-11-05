@@ -10,6 +10,8 @@
 		5A7E458F29151382000D8E8B /* PopWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E458E29151382000D8E8B /* PopWindow.swift */; };
 		5A7E459129153510000D8E8B /* UIResponder+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E459029153510000D8E8B /* UIResponder+Ex.swift */; };
 		5A7E459329153524000D8E8B /* Log+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E459229153524000D8E8B /* Log+Ex.swift */; };
+		5AEFA4D929161C270066C4A4 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFA4D829161C270066C4A4 /* SwiftViewController.swift */; };
+		5AEFA4DB291653A70066C4A4 /* UIDevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFA4DA291653A70066C4A4 /* UIDevice+Ex.swift */; };
 		5AF01A6F290BC38E00F980DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF01A6E290BC38E00F980DB /* AppDelegate.swift */; };
 		5AF01A73290BC38E00F980DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF01A72290BC38E00F980DB /* ViewController.swift */; };
 		5AF01A76290BC38E00F980DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF01A74290BC38E00F980DB /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		5A7E458E29151382000D8E8B /* PopWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopWindow.swift; sourceTree = "<group>"; };
 		5A7E459029153510000D8E8B /* UIResponder+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ex.swift"; sourceTree = "<group>"; };
 		5A7E459229153524000D8E8B /* Log+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+Ex.swift"; sourceTree = "<group>"; };
+		5AEFA4D829161C270066C4A4 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		5AEFA4DA291653A70066C4A4 /* UIDevice+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ex.swift"; sourceTree = "<group>"; };
 		5AF01A6B290BC38E00F980DB /* DailyPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AF01A6E290BC38E00F980DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AF01A72290BC38E00F980DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +86,7 @@
 			children = (
 				5A7E459029153510000D8E8B /* UIResponder+Ex.swift */,
 				5A7E459229153524000D8E8B /* Log+Ex.swift */,
+				5AEFA4DA291653A70066C4A4 /* UIDevice+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -109,6 +114,7 @@
 			children = (
 				5AF01A6E290BC38E00F980DB /* AppDelegate.swift */,
 				5AF01A72290BC38E00F980DB /* ViewController.swift */,
+				5AEFA4D829161C270066C4A4 /* SwiftViewController.swift */,
 				5A7E45952915358B000D8E8B /* Extensions */,
 				5A7E459429153563000D8E8B /* Items */,
 				5AF01A74290BC38E00F980DB /* Main.storyboard */,
@@ -254,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEFA4D929161C270066C4A4 /* SwiftViewController.swift in Sources */,
 				5AF58FFB29113B5E00780CB7 /* DemoBottomAlert.swift in Sources */,
 				5AF58FEE290FB60600780CB7 /* AudioRecordViewController.swift in Sources */,
 				5A7E458F29151382000D8E8B /* PopWindow.swift in Sources */,
@@ -264,6 +271,7 @@
 				5AF58FF52911390200780CB7 /* AlertContainer.swift in Sources */,
 				5AF58FF72911390800780CB7 /* BottomAlertContainer.swift in Sources */,
 				5AF01A83290BC3A500F980DB /* PopWindowQueue.swift in Sources */,
+				5AEFA4DB291653A70066C4A4 /* UIDevice+Ex.swift in Sources */,
 				5A7E459129153510000D8E8B /* UIResponder+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
