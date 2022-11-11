@@ -8,12 +8,19 @@
 import UIKit
 
 class SwiftViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .white
+        
+    
+        let s = "abcdefg"
+        print("s.startIndex = \(s.startIndex)")
+        print("end = \(s.endIndex)")
     }
+    
+    
     
     func autoClosureTest() {
         // 普通闭包
@@ -40,3 +47,4 @@ class SwiftViewController: UIViewController {
     }
     
 }
+

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         case bottomAlert
         case floatWindow
         case advancedSwift
+        case randomDowloadImage
     }
     
     private let items: [DataType] = [
@@ -25,7 +26,8 @@ class ViewController: UIViewController {
         .normalAlert,
         .bottomAlert,
         .floatWindow,
-        .advancedSwift
+        .advancedSwift,
+        .randomDowloadImage
     ]
     
     
@@ -43,12 +45,6 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let vc = SwiftViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
     
     // 测试 window 浮窗（需要强引用）
     lazy var floatCornerWindow: PopWindow = {
@@ -112,6 +108,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             
         case .advancedSwift:
             let vc = SwiftViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .randomDowloadImage:
+            let vc = RandomImageViewController()
             navigationController?.pushViewController(vc, animated: true)
         }
     }

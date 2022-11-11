@@ -9,4 +9,7 @@ target 'DailyPaper' do
   # UI 调工具，使用前需要下载 https://lookin.work/
   pod 'LookinServer', :configurations => ['Debug']
   
+  
+  pod 'Kingfisher'
+
 end

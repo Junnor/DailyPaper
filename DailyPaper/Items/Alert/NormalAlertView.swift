@@ -186,6 +186,10 @@ class NormalAlertView: AlertContainer {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    deinit {
+        print("deinit pop view")
+    }
         
     @objc private func toLeft() {
         show(false) { [weak self] in
