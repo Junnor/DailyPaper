@@ -11,6 +11,8 @@
 		5A7E459129153510000D8E8B /* UIResponder+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E459029153510000D8E8B /* UIResponder+Ex.swift */; };
 		5A7E459329153524000D8E8B /* Log+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E459229153524000D8E8B /* Log+Ex.swift */; };
 		5A8613A3291E2B6B00340A30 /* RandomImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8613A2291E2B6B00340A30 /* RandomImageViewController.swift */; };
+		5A8613A5291E4CB500340A30 /* ZegoPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8613A4291E4CB500340A30 /* ZegoPlayViewController.swift */; };
+		5A8613A7291E4D6800340A30 /* LargeButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A8613A6291E4D6800340A30 /* LargeButtonViewController.swift */; };
 		5AEFA4D929161C270066C4A4 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFA4D829161C270066C4A4 /* SwiftViewController.swift */; };
 		5AEFA4DB291653A70066C4A4 /* UIDevice+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFA4DA291653A70066C4A4 /* UIDevice+Ex.swift */; };
 		5AF01A6F290BC38E00F980DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF01A6E290BC38E00F980DB /* AppDelegate.swift */; };
@@ -32,6 +34,8 @@
 		5A7E459029153510000D8E8B /* UIResponder+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Ex.swift"; sourceTree = "<group>"; };
 		5A7E459229153524000D8E8B /* Log+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+Ex.swift"; sourceTree = "<group>"; };
 		5A8613A2291E2B6B00340A30 /* RandomImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomImageViewController.swift; sourceTree = "<group>"; };
+		5A8613A4291E4CB500340A30 /* ZegoPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZegoPlayViewController.swift; sourceTree = "<group>"; };
+		5A8613A6291E4D6800340A30 /* LargeButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButtonViewController.swift; sourceTree = "<group>"; };
 		5AEFA4D829161C270066C4A4 /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		5AEFA4DA291653A70066C4A4 /* UIDevice+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Ex.swift"; sourceTree = "<group>"; };
 		5AF01A6B290BC38E00F980DB /* DailyPaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,7 +82,9 @@
 				5AF01A82290BC3A500F980DB /* PopWindowQueue.swift */,
 				5AF58FED290FB60600780CB7 /* AudioRecordViewController.swift */,
 				5A7E458E29151382000D8E8B /* PopWindow.swift */,
+				5A8613A6291E4D6800340A30 /* LargeButtonViewController.swift */,
 				5A8613A2291E2B6B00340A30 /* RandomImageViewController.swift */,
+				5A8613A4291E4CB500340A30 /* ZegoPlayViewController.swift */,
 				5AF58FF32911379A00780CB7 /* Alert */,
 			);
 			path = Items;
@@ -263,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A8613A7291E4D6800340A30 /* LargeButtonViewController.swift in Sources */,
 				5AEFA4D929161C270066C4A4 /* SwiftViewController.swift in Sources */,
 				5AF58FFB29113B5E00780CB7 /* DemoBottomAlert.swift in Sources */,
 				5AF58FEE290FB60600780CB7 /* AudioRecordViewController.swift in Sources */,
@@ -274,6 +281,7 @@
 				5AF01A6F290BC38E00F980DB /* AppDelegate.swift in Sources */,
 				5AF58FF52911390200780CB7 /* AlertContainer.swift in Sources */,
 				5AF58FF72911390800780CB7 /* BottomAlertContainer.swift in Sources */,
+				5A8613A5291E4CB500340A30 /* ZegoPlayViewController.swift in Sources */,
 				5AF01A83290BC3A500F980DB /* PopWindowQueue.swift in Sources */,
 				5AEFA4DB291653A70066C4A4 /* UIDevice+Ex.swift in Sources */,
 				5A7E459129153510000D8E8B /* UIResponder+Ex.swift in Sources */,

@@ -9,6 +9,7 @@ PODS:
   - SwifterSwift/StoreKit (5.2.0)
   - SwifterSwift/SwiftStdlib (5.2.0)
   - SwifterSwift/UIKit (5.2.0)
+  - ZegoExpressEngine/Video (3.0.1)
 
 DEPENDENCIES:
   - Kingfisher
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - SwifterSwift/StoreKit
   - SwifterSwift/SwiftStdlib
   - SwifterSwift/UIKit
+  - ZegoExpressEngine/Video
 
 SPEC REPOS:
   trunk:
@@ -28,13 +30,15 @@ SPEC REPOS:
     - LookinServer
     - SnapKit
     - SwifterSwift
+    - ZegoExpressEngine
 
 SPEC CHECKSUMS:
   Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   LookinServer: 18155b1e4a08213c236a1dd6b7ca52328a70a1e3
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwifterSwift: 334181863c416882d97b7a60c05054d9e4d799e2
+  ZegoExpressEngine: b97637689b67eedef6c4d7148a50c5da9692dad7
 
-PODFILE CHECKSUM: f2fe6d4d763fb02b5597f622b193ec27a58b9d17
+PODFILE CHECKSUM: 00d6eb2421b47cbc9f3563f7ee538fcec914c458
 
 COCOAPODS: 1.11.3

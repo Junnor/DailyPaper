@@ -16,8 +16,10 @@ class ViewController: UIViewController {
         case normalAlert
         case bottomAlert
         case floatWindow
+        case largeButton
         case advancedSwift
         case randomDowloadImage
+        case zegoPlay
     }
     
     private let items: [DataType] = [
@@ -26,8 +28,10 @@ class ViewController: UIViewController {
         .normalAlert,
         .bottomAlert,
         .floatWindow,
+        .largeButton,
         .advancedSwift,
-        .randomDowloadImage
+        .randomDowloadImage,
+        .zegoPlay
     ]
     
     
@@ -105,12 +109,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 //            floatCornerWindow.makeKeyAndVisible() // 替换 application 的 keyWindow
             
             windowLog(order: 2)
-            
+        case .largeButton:
+            let vc = LargeButtonViewController()
+            navigationController?.pushViewController(vc, animated: true)
         case .advancedSwift:
             let vc = SwiftViewController()
             navigationController?.pushViewController(vc, animated: true)
         case .randomDowloadImage:
             let vc = RandomImageViewController()
+            navigationController?.pushViewController(vc, animated: true)
+        case .zegoPlay:
+            let vc = ZegoPlayViewController()
             navigationController?.pushViewController(vc, animated: true)
         }
     }

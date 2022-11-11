@@ -11,5 +11,8 @@ target 'DailyPaper' do
   
   
   pod 'Kingfisher'
+  
+  pod 'ZegoExpressEngine/Video'
+
 
 end
