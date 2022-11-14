@@ -10,7 +10,7 @@ import ZegoExpressEngine
 
 // https://doc-zh.zego.im/article/7628
 
-class ZegoPlayViewController: UIViewController {
+class ZegoDemoViewController: UIViewController {
     
     private lazy var remoteUserView: UIView = {
         let item = UIView(frame: CGRect(x: 100, y: 100, width: 180, height: 250))
@@ -102,29 +102,39 @@ class ZegoPlayViewController: UIViewController {
 
 }
 
-extension ZegoPlayViewController: ZegoEventHandler {
+extension ZegoDemoViewController: ZegoEventHandler {
     
     //本地调用 loginRoom 加入房间后，您可通过监听 onRoomStateChanged 回调实时监控自己在本房间内的连接状态。
     //更多信息请参考 https://doc-zh.zego.im/article/12884
     func onRoomStateChanged(_ reason: ZegoRoomStateChangedReason, errorCode: Int32, extendedData: [AnyHashable : Any], roomID: String) {
         switch reason {
         case .logining:
+            // 正在登录房间。当调用 [loginRoom] 登录房间或 [switchRoom] 切换到目标房间时，进入该状态，表示正在请求连接服务器。通常通过该状态进行应用界面的展示。
             dqLog("logining")
         case .logined:
+            //登录房间成功。当登录房间或切换房间成功后，进入该状态，表示登录房间已经成功，用户可以正常收到房间内的其他用户和所有流信息增删的回调通知。
+            //只有当房间状态是登录成功或重连成功时，推流（startPublishingStream）、拉流（startPlayingStream）才能正常收发音视频
             dqLog("logined")
         case .loginFailed:
+            //登录房间失败。当登录房间或切换房间失败后，进入该状态，表示登录房间或切换房间已经失败，例如 AppID 或 AppSign 不正确等。
             dqLog("loginFailed")
         case .reconnecting:
+            //房间连接临时中断。如果因为网络质量不佳产生的中断，SDK 会进行内部重试。
             dqLog("reconnecting")
         case .reconnected:
+            //房间重新连接成功。如果因为网络质量不佳产生的中断，SDK 会进行内部重试，重连成功后进入该状态。
             dqLog("reconnected")
         case .reconnectFailed:
+            //房间重新连接失败。如果因为网络质量不佳产生的中断，SDK 会进行内部重试，重连失败后进入该状态。
             dqLog("reconnectFailed")
         case .kickOut:
+            //被服务器踢出房间。例如有相同用户名在其他地方登录房间导致本端被踢出房间，会进入该状态。
             dqLog("kickOut")
         case .logout:
+            //登出房间成功。没有登录房间前默认为该状态，当调用 [logoutRoom] 登出房间成功或 [switchRoom] 内部登出当前房间成功后，进入该状态。
             dqLog("logout")
         case .logoutFailed:
+            //登出房间失败。当调用 [logoutRoom] 登出房间失败或 [switchRoom] 内部登出当前房间失败后，进入该状态。
             dqLog("logoutFailed")
         @unknown default:
             dqLog("unknown default")

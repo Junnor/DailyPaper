@@ -119,7 +119,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             let vc = RandomImageViewController()
             navigationController?.pushViewController(vc, animated: true)
         case .zegoPlay:
-            let vc = ZegoPlayViewController()
+            let vc = ZegoDemoViewController()
             navigationController?.pushViewController(vc, animated: true)
         }
     }
